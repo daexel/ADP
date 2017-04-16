@@ -7,17 +7,19 @@ package adp04;
  * @author daexel
  *
  */
-public class PascalIterativ {
-	private int anzahl_zeilen=10;
-    private int[][] dreieck=new int[anzahl_zeilen+2][anzahl_zeilen];
+public class PascalIterativ implements IPascalDreieck {
+	private int anzahl_zeilen;
+    private int[][] dreieck;//=new int[anzahl_zeilen+2][anzahl_zeilen];
    
-    public void dreieck_berechnen()
-    {
+    public void berechneZeile(int zeile)
+    {	
+    	this.anzahl_zeilen=zeile;
+    	this.dreieck= new int[zeile+2][zeile];
         int i,j;
        
         dreieck[1][0]=1;
        
-        for(j=1;j<10;j++)
+        for(j=1;j<zeile;j++)
         {
             for(i=1;i<j+2;i++)
             {
@@ -49,7 +51,7 @@ public class PascalIterativ {
     public static void main(String[] args)
     {
     	PascalIterativ iterPascal = new PascalIterativ();
-        iterPascal.dreieck_berechnen();
+        iterPascal.berechneZeile(5);
         iterPascal.dreieck_ausgeben();
         System.out.println("2 über 4="+iterPascal.n_ueber_k(2,4));
     }
