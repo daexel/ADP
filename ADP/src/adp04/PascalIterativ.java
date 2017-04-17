@@ -13,7 +13,7 @@ import Counter.Counter;
  */
 public class PascalIterativ extends Counter implements IPascalDreieck {
 	private int anzahl_zeilen;
-	private int[][] dreieck;// =new int[anzahl_zeilen+2][anzahl_zeilen];
+	private int[][] dreieck;
 /**
  * 
  * Berechnet die N-te Zeile des Pascalschen Dreiecks
