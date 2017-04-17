@@ -14,7 +14,7 @@ import Counter.Counter;
 public class PascalRekursiv extends Counter implements IPascalDreieck {
 
 	// private int aufwandsZaehler=0; // abeglöst durch Counter klasse
-	//
+	
 	// public int getAufwand(){
 	// return this.aufwandsZaehler;
 	// }
