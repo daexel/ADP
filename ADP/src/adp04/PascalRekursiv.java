@@ -46,7 +46,7 @@ public class PascalRekursiv extends Counter implements IPascalDreieck {
 	public void berechneZeile(int zeile) {
 		for (int spalte = 0; spalte <= zeile; spalte++) {
 			count();
-			System.out.print(function_pascal(zeile, spalte) + " ");
+			function_pascal(zeile, spalte);
 		}
 	}
 
