@@ -8,10 +8,12 @@ package adp05;
  *
  */
 
-public class Element {
+public class  Container <T> {
 private int key;
+private T element;
 
-public Element(int key){
+
+public Container(int key){
 	this.key=key;
 }
 
@@ -23,8 +25,8 @@ public boolean equals( Object o ){
   if ( o == null ){
     return false;
   }
-  if ( o instanceof Element ){
-	  if (this.key== ((Element) o).getKey()){
+  if ( o instanceof Container ){
+	  if (this.key== ((Container) o).getKey()){
 		  return true;
 	  } 
   }

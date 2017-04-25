@@ -8,8 +8,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import adp05.Element;
-import adp05.QuickSortV2;
+import adp05.Container;
+import adp05.QuickSortFirstTry;
 
 
 /**
@@ -19,29 +19,29 @@ import adp05.QuickSortV2;
 public class QuicksortTest {
 	
 	//Erstellen von TestElementen
-	private Element element1 = new Element(1);
-	private Element element2 = new Element(2);
-	private Element element3 = new Element(3);
-	private Element element4 = new Element(4);
-	private Element element5 = new Element(5);
+	private Container element1 = new Container(1);
+	private Container element2 = new Container(2);
+	private Container element3 = new Container(3);
+	private Container element4 = new Container(4);
+	private Container element5 = new Container(5);
 
 	//Erstellen von TestArrays
-	Element [] expectedResult={element1, element2, element3, element4, element5};
-	Element [] arrayQuick1={element1,element2,element5,element4,element3};
-	Element [] arrayQuick2={element5, element4, element3, element2, element1};
+	Container [] expectedResult={element1, element2, element3, element4, element5};
+	Container [] arrayQuick1={element1,element2,element5,element4,element3};
+	Container [] arrayQuick2={element5, element4, element3, element2, element1};
 	
 	
 	@Test
 	public void quickSortFirstTest(){
 	
-	QuickSortV2 qs = new QuickSortV2();
+	QuickSortFirstTry qs = new QuickSortFirstTry();
 	qs.quickSort(arrayQuick1,0, 4,"first");
 	
 	for (int i=0; i<expectedResult.length;i++){
 		assertTrue(arrayQuick1[i].getKey()== expectedResult[i].getKey());
 	}
 	
-	QuickSortV2 qs2 = new QuickSortV2();
+	QuickSortFirstTry qs2 = new QuickSortFirstTry();
 	qs2.quickSort(arrayQuick2,0, 4,"first");
 	
 	for (int i=0; i<expectedResult.length;i++){
@@ -51,14 +51,14 @@ public class QuicksortTest {
 	
 	@Test
 	public void quickSortLastTest(){
-		QuickSortV2 qs = new QuickSortV2();
+		QuickSortFirstTry qs = new QuickSortFirstTry();
 		qs.quickSort(arrayQuick1,0, 4,"last");
 		
 		for (int i=0; i<expectedResult.length;i++){
 			assertTrue(arrayQuick1[i].getKey()== expectedResult[i].getKey());
 		}
 		
-		QuickSortV2 qs2 = new QuickSortV2();
+		QuickSortFirstTry qs2 = new QuickSortFirstTry();
 		qs2.quickSort(arrayQuick2,0, 4,"last");
 		
 		for (int i=0; i<expectedResult.length;i++){
@@ -68,14 +68,14 @@ public class QuicksortTest {
 	
 	@Test
 	public void quickSortMiddleTest(){
-		QuickSortV2 qs = new QuickSortV2();
+		QuickSortFirstTry qs = new QuickSortFirstTry();
 		qs.quickSort(arrayQuick1,0, 4,"middle");
 		
 		for (int i=0; i<expectedResult.length;i++){
 			assertTrue(arrayQuick1[i].getKey()== expectedResult[i].getKey());
 		}
 		
-		QuickSortV2 qs2 = new QuickSortV2();
+		QuickSortFirstTry qs2 = new QuickSortFirstTry();
 		qs2.quickSort(arrayQuick2,0, 4,"middle");
 		
 		for (int i=0; i<expectedResult.length;i++){
@@ -86,14 +86,14 @@ public class QuicksortTest {
 	
 	@Test
 	public void quickSortRandomTest(){
-		QuickSortV2 qs = new QuickSortV2();
+		QuickSortFirstTry qs = new QuickSortFirstTry();
 		qs.quickSort(arrayQuick1,0, 4,"random");
 		
 		for (int i=0; i<expectedResult.length;i++){
 			assertTrue(arrayQuick1[i].getKey()== expectedResult[i].getKey());
 		}
 		
-		QuickSortV2 qs2 = new QuickSortV2();
+		QuickSortFirstTry qs2 = new QuickSortFirstTry();
 		qs2.quickSort(arrayQuick2,0, 4,"random");
 		
 		for (int i=0; i<expectedResult.length;i++){
